@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  ronin-service:
+    image: node-docker-image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./server.js:/code/server.js
+    ports:
+      - 8000:8000
